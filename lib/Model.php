@@ -531,7 +531,7 @@ abstract class Model extends Query implements \JsonSerializable
         $select = trim($query);
         $select = strtolower($select);
 
-        $match = preg_match('/^select|return|^with\srecursive/', $select);
+        $match = preg_match('/^select|return|^with/', $select);
 
         try {
             $this->verifyConnection();
