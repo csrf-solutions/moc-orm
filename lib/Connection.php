@@ -178,7 +178,7 @@ class Connection
         if (!is_string($schema)) throw new \InvalidArgumentException('The parameter don\'t is an String.');
         if ($this->driver == 'mysql') throw new \InvalidArgumentException('This driver not supported schemas.');
 
-        $this->getConnection()->exec("SET search_path TO '$schema';");
+        $this->getConnection()->exec("SET search_path TO $schema;");
         return $this;
     }
 
